@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🌿 ROCO Academic Homepage Template ✨
+# 🌿 洛克王国主题个人主页 ✨
+
+*ROCO Academic Homepage Template*
 
 ### 把学术旅程，装进一座会发光的小屋
 
@@ -13,7 +15,7 @@
 填好资料、换上头像、推送到 GitHub Pages，  
 你的专属学术小屋就可以正式开门营业啦！🏡
 
-[🌐 在线逛逛](https://sxswz213.github.io/)
+[🌐 在线示例](https://sxswz213.github.io/)
 
 <br>
 
