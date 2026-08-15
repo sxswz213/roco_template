@@ -16,7 +16,8 @@
 - 通过 `_config.yml` 管理站点标题、导航栏、联系方式和页脚。
 - 通过 `_data/*.yml` 管理新闻、成员、奖项、服务活动等内容。
 - 通过 `assets/ref.bib` 和 `jekyll-scholar` 管理论文列表。
-- 已配置洛克王国主题背景图：`images/image.png`。
+- 内置两个主题：`喵喵` 使用 `images/miaomiao.png`，`水蓝蓝` 使用 `images/shuilanlan.png`。
+- 页面右上角可一键切换主题，并自动记住上次选择。
 
 ## 使用方式
 
@@ -49,7 +50,7 @@ bundle exec jekyll build
 1. 修改 `_config.yml`：站点标题、邮箱、机构、URL 和导航栏。
 2. 修改 `_data/pi.yml`：个人简介、教育经历、主页链接和 CV 路径。
 3. 替换 `images/profile-placeholder.svg`：头像或实验室 logo。
-4. 替换 `images/image.png`：页面背景图。
+4. 替换 `images/miaomiao.png` 或 `images/shuilanlan.png`：对应主题的页面背景图。
 5. 修改 `assets/ref.bib`：添加论文 BibTeX。
 6. 修改 `_data/`、`_pages/`、`_posts/`：更新新闻、页面和博客内容。
 
