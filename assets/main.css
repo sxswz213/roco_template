@@ -22482,6 +22482,21 @@ body[data-theme=shuilanlan] {
   --muted-text-color: #3d5366;
 }
 
+body[data-theme=huohua] {
+  --page-bg-color: #fff4ea;
+  --page-bg-image: url(/images/huohua.png);
+  --navbar-bg: #e46f36;
+  --navbar-border: #ffd19a;
+  --navbar-brand-color: #ffffff;
+  --navbar-link-color: #fff7ef;
+  --navbar-link-hover-color: #ffffff;
+  --link-color: #d85d2a;
+  --link-hover-color: #a93d15;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --text-color: #2c1b14;
+  --muted-text-color: #6b4a3b;
+}
+
 body {
   min-height: 100vh;
   color: var(--text-color);
