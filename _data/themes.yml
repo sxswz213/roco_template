@@ -1,0 +1,7 @@
+default: miaomiao
+
+themes:
+  miaomiao:
+    label: 喵喵
+  shuilanlan:
+    label: 水蓝蓝

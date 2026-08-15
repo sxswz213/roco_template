@@ -4,6 +4,7 @@ email: your.email@example.edu
 description: Academic webpage template for researchers
 baseurl: ""
 url: "https://yourusername.github.io"
+theme_style: miaomiao
 
 # Google analytics ID: Uncomment and add your own if needed
 # google_analytics: XX

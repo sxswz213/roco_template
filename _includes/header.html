@@ -25,5 +25,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/{{ nav_url }}">{{ nav_label }}</a>
             {% endfor %}
         </div>
+        <select id="theme-select" class="theme-select form-select form-select-sm" aria-label="Theme selector">
+            {% assign current_theme = site.theme_style | default: site.data.themes.default %}
+            {% for theme in site.data.themes.themes %}
+                <option value="{{ theme[0] }}" {% if theme[0] == current_theme %}selected{% endif %}>{{ theme[1].label }}</option>
+            {% endfor %}
+        </select>
     </div>
 </nav>

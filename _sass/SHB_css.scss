@@ -2,10 +2,41 @@ img {
     border-radius:5%;
 }
 
+body[data-theme="miaomiao"] {
+  --page-bg-color: #f6fbf2;
+  --page-bg-image: url(#{$baseurl + "/images/miaomiao.png"});
+  --navbar-bg: #78c2ad;
+  --navbar-border: #f8f9fa;
+  --navbar-brand-color: #ffffff;
+  --navbar-link-color: rgba(255, 255, 255, 0.55);
+  --navbar-link-hover-color: rgba(255, 255, 255, 0.75);
+  --link-color: #3f9f86;
+  --link-hover-color: #2f826d;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --text-color: #111;
+  --muted-text-color: #444;
+}
+
+body[data-theme="shuilanlan"] {
+  --page-bg-color: #eef9ff;
+  --page-bg-image: url(#{$baseurl + "/images/shuilanlan.png"});
+  --navbar-bg: #2f8fd7;
+  --navbar-border: #b9e8ff;
+  --navbar-brand-color: #ffffff;
+  --navbar-link-color: #f1fbff;
+  --navbar-link-hover-color: #ffffff;
+  --link-color: #2279b8;
+  --link-hover-color: #135783;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --text-color: #102033;
+  --muted-text-color: #3d5366;
+}
+
 body {
   min-height: 100vh;
-  background-color: #f6fbf2;
-  background-image: url($baseurl + "/images/image.png");
+  color: var(--text-color);
+  background-color: var(--page-bg-color);
+  background-image: var(--page-bg-image);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,11 +44,11 @@ body {
 }
 
 a {
-  color: #3f9f86;
+  color: var(--link-color);
 }
 
 a:hover {
-  color: #2f826d;
+  color: var(--link-hover-color);
 }
 
 .jumbotron {
@@ -26,18 +57,18 @@ a:hover {
     margin-top:22px; 
     margin-bottom:22px;
     font-size: medium;
-    color: #111;
-    background: #fff;
+    color: var(--text-color);
+    background: var(--card-bg);
     border: 1px solid #e6e8eb;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .jumbotron a {
-  color: #3f9f86;
+  color: var(--link-color);
 }
 
 .jumbotron p {
-  color: #444;
+  color: var(--muted-text-color);
 }
 
 .jumbotron h4 {
@@ -50,14 +81,14 @@ a:hover {
 }
 
 .publication-more-link {
-  color: #3f9f86;
+  color: var(--link-color);
   font-weight: 700;
   font-size: 1.08rem;
   text-decoration: underline;
 }
 
 .sidebar-profile ul {
-  color: #444;
+  color: var(--muted-text-color);
 }
 
 .sidebar-profile h4 {
@@ -83,7 +114,7 @@ a:hover {
 }
 
 #homeid .home-services h4 {
-  color: #444;
+  color: var(--muted-text-color);
 }
 
 #homeid .home-services li {
@@ -92,7 +123,40 @@ a:hover {
 
 .navbar {
   margin-bottom: 20px;
-  border-bottom: 4px solid var(--light);
+  background: var(--navbar-bg) !important;
+  border-bottom: 4px solid var(--navbar-border);
+}
+
+.navbar .navbar-brand {
+  color: var(--navbar-brand-color);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--navbar-link-color);
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: var(--navbar-brand-color);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: var(--navbar-link-hover-color);
+}
+
+.theme-select {
+  width: auto;
+  min-width: 92px;
+  margin-left: auto;
+  border-color: rgba(255, 255, 255, 0.55);
+  color: var(--navbar-link-color);
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.theme-select:focus {
+  border-color: var(--navbar-border);
+  box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
 }
 
 .btn {
