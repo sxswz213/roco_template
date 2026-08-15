@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Publications - Your Name</title>
-  <meta name="description" content="Academic webpage template for researchers">
-  <link rel="stylesheet" href="/assets/main.css?v=1786771741">
+  <title>Research Notes - Little Roco</title>
+  <meta name="description" content="A Roco Kingdom themed academic homepage template">
+  <link rel="stylesheet" href="/assets/main.css?v=1786774255">
   <link rel="canonical" href="https://yourusername.github.io/publications/">
   <link rel="shortcut icon" type ="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -50,7 +50,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar sticky-top navbar-expand-lg bg-primary" data-bs-theme="dark">
     <a class="navbar-brand" href="/">
      <img src="/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
-      Your Name
+      Little Roco
     </a>
     <button class="toggler navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -90,6 +90,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
                 <option value="huohua" >火花</option>
             
+                <option value="maodou" >大耳帽兜</option>
+            
+                <option value="emoding" >恶魔叮</option>
+            
         </select>
     </div>
 </nav>
@@ -98,7 +102,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container-fluid" style="font-size: medium;">
       <div class="row">
         <div id="gridid" class="col-sm-12 col-xs-12">
-  <h2 id="publications">Publications</h2>
+  <h2 id="research-notes--publications">Research Notes &amp; Publications</h2>
+
+<div class="jumbotron">
+  <p>These are Little Roco’s research scrolls on spirit teamwork, battle coordination, and the occasional questionable spell that somehow became useful.</p>
+</div>
 
 <ol class="bibliography" reversed="reversed"><li><style>
 ol.bibliography { list-style: none; padding: 0; margin: 0; }
@@ -224,18 +232,18 @@ ol.bibliography li { padding: 0; margin: 0; }
   <div class="pub-body">
     <div class="pub-title">
       
-        <a href="http://doi.org/10.0000/example-doi" target="_blank">A Sample Research Paper Title</a>
+        Trust, Timing, and Tiny Sparks: Cooperative Strategies for Multi-Spirit Battle Teams
       
       
         <span class="pub-badge badge-journal">Journal</span>
       
     </div>
 
-    <div class="pub-authors">Surname, Given and Collaborator, Example</div>
+    <div class="pub-authors">Roco, Little and Meowmeow, Green</div>
 
     <div class="pub-venue">
       
-      Journal or Conference Name
+      Journal of Roco Kingdom Spirit Studies
       , 2026
     </div>
 
@@ -245,39 +253,215 @@ ol.bibliography li { padding: 0; margin: 0; }
       
       
       
-        <a href="http://doi.org/10.0000/example-doi" target="_blank" class="pub-btn btn-doi">DOI</a>
+      <button class="pub-btn btn-bib" onclick="toggleBibroco2026spiritteams()">BIB</button>
       
-      <button class="pub-btn btn-bib" onclick="toggleBibsample2026main()">BIB</button>
-      
-        <button class="pub-btn btn-abs" onclick="toggleAbssample2026main()">Abstract</button>
+        <button class="pub-btn btn-abs" onclick="toggleAbsroco2026spiritteams()">Abstract</button>
       
       
       
       
     </div>
 
-    <div id="bib-sample2026main" class="collapse-box">@article{sample2026main,
-  title = {A Sample Research Paper Title},
-  author = {Surname, Given and Collaborator, Example},
-  journal = {Journal or Conference Name},
+    <div id="bib-roco2026spiritteams" class="collapse-box">@article{roco2026spiritteams,
+  title = {Trust, Timing, and Tiny Sparks: Cooperative Strategies for Multi-Spirit Battle Teams},
+  author = {Roco, Little and Meowmeow, Green},
+  journal = {Journal of Roco Kingdom Spirit Studies},
   year = {2026},
-  keywords = {main},
-  doi = {10.0000/example-doi}
+  keywords = {main}
 }
 </div>
     
-      <div id="abs-sample2026main" class="collapse-box">Replace this sample bibliography entry with your own publications.</div>
+      <div id="abs-roco2026spiritteams" class="collapse-box">We study how complementary abilities, role assignment, and adaptive coordination help spirit teams perform reliably in unpredictable encounters.</div>
     
   </div>
 </div>
 
 <script>
-function toggleBibsample2026main() {
-  var x = document.getElementById('bib-sample2026main');
+function toggleBibroco2026spiritteams() {
+  var x = document.getElementById('bib-roco2026spiritteams');
   x.style.display = (x.style.display === 'block') ? 'none' : 'block';
 }
-function toggleAbssample2026main() {
-  var x = document.getElementById('abs-sample2026main');
+function toggleAbsroco2026spiritteams() {
+  var x = document.getElementById('abs-roco2026spiritteams');
+  x.style.display = (x.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+</li>
+<li><style>
+ol.bibliography { list-style: none; padding: 0; margin: 0; }
+ol.bibliography li { padding: 0; margin: 0; }
+
+.pub-card {
+  display: flex;
+  gap: 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s;
+}
+.pub-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); }
+
+.pub-img-wrap {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: flex-start;
+}
+.pub-img-wrap img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.pub-img-placeholder {
+  width: 160px;
+  height: 110px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.75em;
+}
+
+.pub-body { flex: 1; min-width: 0; }
+
+.pub-title {
+  font-size: 1.02em;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.pub-title a { color: #1a1a2e; text-decoration: none; }
+.pub-title a:hover { color: #0077cc; text-decoration: underline; }
+
+.pub-badge {
+  display: inline-block;
+  font-size: 0.68em;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.badge-preprint  { background: #fff3cd; color: #856404; border: 1px solid #ffc107; }
+.badge-conference{ background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+.badge-journal   { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+
+.pub-authors { font-size: 0.87em; color: #555; margin-bottom: 4px; }
+.pub-venue   { font-size: 0.83em; color: #888; margin-bottom: 10px; font-style: italic; }
+
+.pub-btn {
+  display: inline-block;
+  font-size: 0.73em;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.btn-arxiv { background: #b31b1b; color: #fff; }
+.btn-doi   { background: #4a90d9; color: #fff; }
+.btn-link  { background: #6c757d; color: #fff; }
+.btn-pdf   { background: #28a745; color: #fff; }
+.btn-bib   { background: #dc3545; color: #fff; }
+.btn-abs   { background: #e8a020; color: #fff; }
+.btn-github{ background: #0f5132; color: #fff; }
+.btn-demo  { background: #00a1d6; color: #fff; }
+.pub-btn:hover { opacity: 0.85; }
+
+.collapse-box {
+  display: none;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 0.82em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .pub-card { flex-direction: column; }
+  .pub-img-wrap { flex: none; }
+  .pub-img-wrap img, .pub-img-placeholder { width: 100%; height: 140px; }
+}
+</style>
+
+<div class="pub-card">
+  <div class="pub-img-wrap">
+    
+    
+    
+      <div class="pub-img-placeholder">No image</div>
+    
+  </div>
+
+  <div class="pub-body">
+    <div class="pub-title">
+      
+        A Field Guide to Real-Time Coordination in Magical Encounters
+      
+      
+        <span class="pub-badge badge-conference">Conference</span>
+      
+    </div>
+
+    <div class="pub-authors">Roco, Little and Shuilanlan, Blue</div>
+
+    <div class="pub-venue">
+      Proceedings of the Roco Academy Workshop on Battle Intelligence
+      
+      , 2025
+    </div>
+
+    <div>
+      
+      
+      
+      
+      
+      <button class="pub-btn btn-bib" onclick="toggleBibroco2025coordination()">BIB</button>
+      
+        <button class="pub-btn btn-abs" onclick="toggleAbsroco2025coordination()">Abstract</button>
+      
+      
+      
+      
+    </div>
+
+    <div id="bib-roco2025coordination" class="collapse-box">@inproceedings{roco2025coordination,
+  title = {A Field Guide to Real-Time Coordination in Magical Encounters},
+  author = {Roco, Little and Shuilanlan, Blue},
+  booktitle = {Proceedings of the Roco Academy Workshop on Battle Intelligence},
+  year = {2025},
+  keywords = {main}
+}
+</div>
+    
+      <div id="abs-roco2025coordination" class="collapse-box">This work summarizes practical coordination patterns observed during field explorations across the kingdom.</div>
+    
+  </div>
+</div>
+
+<script>
+function toggleBibroco2025coordination() {
+  var x = document.getElementById('bib-roco2025coordination');
+  x.style.display = (x.style.display === 'block') ? 'none' : 'block';
+}
+function toggleAbsroco2025coordination() {
+  var x = document.getElementById('abs-roco2025coordination');
   x.style.display = (x.style.display === 'block') ? 'none' : 'block';
 }
 </script>
@@ -409,19 +593,17 @@ ol.bibliography li { padding: 0; margin: 0; }
   <div class="pub-body">
     <div class="pub-title">
       
-        A Sample Workshop Paper
+        Slightly Questionable Spells and Other Reproducible Research Notes
       
-      
-        <span class="pub-badge badge-conference">Conference</span>
       
     </div>
 
-    <div class="pub-authors">Surname, Given and Coauthor, Example</div>
+    <div class="pub-authors">Roco, Little</div>
 
     <div class="pub-venue">
-      Workshop or Conference Name
       
-      , 2025
+      
+      2025
     </div>
 
     <div>
@@ -430,36 +612,35 @@ ol.bibliography li { padding: 0; margin: 0; }
       
       
       
-      <button class="pub-btn btn-bib" onclick="toggleBibsample2025workshop()">BIB</button>
+      <button class="pub-btn btn-bib" onclick="toggleBibroco2025notes()">BIB</button>
       
-        <button class="pub-btn btn-abs" onclick="toggleAbssample2025workshop()">Abstract</button>
+        <button class="pub-btn btn-abs" onclick="toggleAbsroco2025notes()">Abstract</button>
       
       
       
       
     </div>
 
-    <div id="bib-sample2025workshop" class="collapse-box">@inproceedings{sample2025workshop,
-  title = {A Sample Workshop Paper},
-  author = {Surname, Given and Coauthor, Example},
-  booktitle = {Workshop or Conference Name},
+    <div id="bib-roco2025notes" class="collapse-box">@misc{roco2025notes,
+  title = {Slightly Questionable Spells and Other Reproducible Research Notes},
+  author = {Roco, Little},
   year = {2025},
   keywords = {other}
 }
 </div>
     
-      <div id="abs-sample2025workshop" class="collapse-box">Optional abstract text.</div>
+      <div id="abs-roco2025notes" class="collapse-box">A living notebook of experiments, mistakes, and surprisingly useful magical tricks.</div>
     
   </div>
 </div>
 
 <script>
-function toggleBibsample2025workshop() {
-  var x = document.getElementById('bib-sample2025workshop');
+function toggleBibroco2025notes() {
+  var x = document.getElementById('bib-roco2025notes');
   x.style.display = (x.style.display === 'block') ? 'none' : 'block';
 }
-function toggleAbssample2025workshop() {
-  var x = document.getElementById('abs-sample2025workshop');
+function toggleAbsroco2025notes() {
+  var x = document.getElementById('abs-roco2025notes');
   x.style.display = (x.style.display === 'block') ? 'none' : 'block';
 }
 </script>
@@ -477,25 +658,25 @@ function toggleAbssample2025workshop() {
 			<div class="row">
 				<div class="col-sm-4">
 					<h5>Contact</h5>
-					<p><a href="mailto:your.email@example.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact via email</a> <br/> <a href="https://github.com/yourusername"><i class="fa fa-github fa-1x"></i> GitHub</a>
+					<p><a href="mailto:little.roco@example.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact via email</a> <br/> <a href="https://github.com/yourusername"><i class="fa fa-github fa-1x"></i> GitHub</a>
 </p>
 				</div>
 				<div class="col-sm-4">
 					<h5>About</h5>
-					<p>Your Name<br/> Your Position<br/> Your Institution
+					<p>Little Roco<br/> Spirit Studies Student<br/> Roco Kingdom Academy of Magic
 </p>
 				</div>
 
 				<div class="col-sm-4">
 					<h5>Coordinates</h5>
-					<p>Your Department<br/> Your Institution<br/> City, State/Province, Country
+					<p>Spirit Strategy Tower<br/> Roco Kingdom Academy of Magic<br/> Roco Kingdom
 </p>
 				</div>
 
 			</div>
 
 			<center>
-				<p>&copy 2026 Your Name </p>
+				<p>&copy 2026 Little Roco </p>
 			</center>
 		</div>
 	</div>
