@@ -2,6 +2,8 @@
 
 一套带点“洛克王国”气质的 Jekyll 学术主页模板：清爽、可爱、适合展示论文、项目、博客、活动和个人资料。你可以把它当成自己的“学术小屋”——换上头像、填入论文、挂上项目徽章，再召唤一只绿色小伙伴当背景守护灵。
 
+![ROCO Academic Homepage Template 示例](example.png)
+
 ## 模板来源与致谢
 
 本项目基于原 `Academic Homepage Template` 改造而来，保留 MIT License，并在此感谢原模板提供的 Jekyll 页面结构、数据组织方式和学术主页基础样式。
