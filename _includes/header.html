@@ -4,8 +4,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <nav class="navbar sticky-top navbar-expand-lg bg-primary" data-bs-theme="dark">
-    <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">
-     <img src="{{ site.url }}{{ site.baseurl }}/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
+    <a class="navbar-brand" href="{{ "/" | relative_url }}">
+     <img src="{{ "/favicon.ico" | relative_url }}" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
       {{ site.title | escape }}
     </a>
     <button class="toggler navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
         <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
+            <a class="nav-item nav-link" href="{{ "/" | relative_url }}">Home</a>
             {% for page in site.nav_pages %}       
                 {% assign nav_url = page.url | default: page.name %}
                 {% if page.label %}
@@ -22,7 +22,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 {% else %}
                     {% assign nav_label = page.name | capitalize %}
                 {% endif %}
-                <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/{{ nav_url }}">{{ nav_label }}</a>
+                <a class="nav-item nav-link" href="{{ nav_url | relative_url }}">{{ nav_label }}</a>
             {% endfor %}
         </div>
         <select id="theme-select" class="theme-select form-select form-select-sm" aria-label="Theme selector">
