@@ -35,7 +35,7 @@ Feel free to get in touch if you would like to discuss research ideas, collabora
 <div class="container">
 <div class="row">
 <center>
-<img src="{{ site.url }}{{ site.baseurl }}/images/banner-placeholder.svg" width="100%" style="opacity: 0.9;"/><br/>
+<img src="{{ "/images/banner-placeholder.svg" | relative_url }}" width="100%" style="opacity: 0.9;"/><br/>
   <br/>
 </center>
 </div>
