@@ -1,0 +1,18 @@
+# Generated site output and caches
+/_site/
+/.jekyll-cache/
+/.sass-cache/
+/.jekyll-metadata
+
+# Local dependency installs
+/node_modules/
+/vendor/
+/.bundle/
+
+# Local lockfiles generated during ad-hoc setup
+/package-lock.json
+
+# Editor, OS, and local tooling
+.DS_Store
+tags
+/.vscode/

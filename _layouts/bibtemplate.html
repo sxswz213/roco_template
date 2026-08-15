@@ -1,0 +1,208 @@
+---
+---
+
+<style>
+ol.bibliography { list-style: none; padding: 0; margin: 0; }
+ol.bibliography li { padding: 0; margin: 0; }
+
+.pub-card {
+  display: flex;
+  gap: 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s;
+}
+.pub-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); }
+
+.pub-img-wrap {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: flex-start;
+}
+.pub-img-wrap img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.pub-img-placeholder {
+  width: 160px;
+  height: 110px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.75em;
+}
+
+.pub-body { flex: 1; min-width: 0; }
+
+.pub-title {
+  font-size: 1.02em;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.pub-title a { color: #1a1a2e; text-decoration: none; }
+.pub-title a:hover { color: #0077cc; text-decoration: underline; }
+
+.pub-badge {
+  display: inline-block;
+  font-size: 0.68em;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.badge-preprint  { background: #fff3cd; color: #856404; border: 1px solid #ffc107; }
+.badge-conference{ background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+.badge-journal   { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+
+.pub-authors { font-size: 0.87em; color: #555; margin-bottom: 4px; }
+.pub-venue   { font-size: 0.83em; color: #888; margin-bottom: 10px; font-style: italic; }
+
+.pub-btn {
+  display: inline-block;
+  font-size: 0.73em;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.btn-arxiv { background: #b31b1b; color: #fff; }
+.btn-doi   { background: #4a90d9; color: #fff; }
+.btn-link  { background: #6c757d; color: #fff; }
+.btn-pdf   { background: #28a745; color: #fff; }
+.btn-bib   { background: #dc3545; color: #fff; }
+.btn-abs   { background: #e8a020; color: #fff; }
+.btn-github{ background: #0f5132; color: #fff; }
+.btn-demo  { background: #00a1d6; color: #fff; }
+.pub-btn:hover { opacity: 0.85; }
+
+.collapse-box {
+  display: none;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 0.82em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .pub-card { flex-direction: column; }
+  .pub-img-wrap { flex: none; }
+  .pub-img-wrap img, .pub-img-placeholder { width: 100%; height: 140px; }
+}
+</style>
+
+<div class="pub-card">
+  <div class="pub-img-wrap">
+    {% assign imgtest = false %}
+    {% if entry.image %}
+      {% assign imgpath = "/images/papers/" | append: entry.image %}
+      {% for file in site.static_files %}
+        {% if file.path == imgpath %}{% assign imgtest = true %}{% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if imgtest %}
+      <img src="{{ site.url }}{{ site.baseurl }}/images/papers/{{ entry.image }}" alt="{{ entry.title }}" />
+    {% else %}
+      <div class="pub-img-placeholder">No image</div>
+    {% endif %}
+  </div>
+
+  <div class="pub-body">
+    <div class="pub-title">
+      {% if entry.arxiv %}
+        <a href="{{ entry.arxiv }}" target="_blank">{{ entry.title }}</a>
+      {% elsif entry.url %}
+        <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
+      {% elsif entry.doi %}
+        <a href="http://doi.org/{{ entry.doi }}" target="_blank">{{ entry.title }}</a>
+      {% else %}
+        {{ entry.title }}
+      {% endif %}
+      {% if entry.type == 'unpublished' %}
+        <span class="pub-badge badge-preprint">Preprint</span>
+      {% elsif entry.type == 'inproceedings' %}
+        <span class="pub-badge badge-conference">Conference</span>
+      {% elsif entry.type == 'article' %}
+        <span class="pub-badge badge-journal">Journal</span>
+      {% endif %}
+    </div>
+
+    <div class="pub-authors">{{ entry.author }}</div>
+
+    <div class="pub-venue">
+      {% if entry.booktitle %}{{ entry.booktitle }}{% endif %}
+      {% if entry.journal %}{{ entry.journal }}{% endif %}
+      {% if entry.booktitle or entry.journal %}, {% endif %}{{ entry.year }}
+    </div>
+
+    <div>
+      {% assign bibtest = false %}
+      {% if entry.file %}
+        {% assign bibfile = "/papers/" | append: entry.file %}
+        {% for file in site.static_files %}
+          {% if file.path contains bibfile %}{% assign bibtest = true %}{% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if bibtest %}
+        <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank" class="pub-btn btn-pdf">PDF</a>
+      {% endif %}
+      {% if entry.arxiv %}
+        <a href="{{ entry.arxiv }}" target="_blank" class="pub-btn btn-arxiv">arXiv</a>
+      {% endif %}
+      {% if entry.doi %}
+        <a href="http://doi.org/{{ entry.doi }}" target="_blank" class="pub-btn btn-doi">DOI</a>
+      {% endif %}
+      <button class="pub-btn btn-bib" onclick="toggleBib{{entry.key}}()">BIB</button>
+      {% if entry.abstract %}
+        <button class="pub-btn btn-abs" onclick="toggleAbs{{entry.key}}()">Abstract</button>
+      {% endif %}
+      {% if entry.link %}
+        <a href="{{ entry.link }}" target="_blank" class="pub-btn btn-link">Link</a>
+      {% endif %}
+      {% if entry.github %}
+        <a href="{{ entry.github }}" target="_blank" class="pub-btn btn-github">GitHub</a>
+      {% endif %}
+      {% if entry.demo %}
+        <a href="{{ entry.demo }}" target="_blank" class="pub-btn btn-demo">Demo</a>
+      {% endif %}
+    </div>
+
+    <div id="bib-{{entry.key}}" class="collapse-box">{{ entry.bibtex }}</div>
+    {% if entry.abstract %}
+      <div id="abs-{{entry.key}}" class="collapse-box">{{ entry.abstract }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+function toggleBib{{entry.key}}() {
+  var x = document.getElementById('bib-{{entry.key}}');
+  x.style.display = (x.style.display === 'block') ? 'none' : 'block';
+}
+function toggleAbs{{entry.key}}() {
+  var x = document.getElementById('abs-{{entry.key}}');
+  x.style.display = (x.style.display === 'block') ? 'none' : 'block';
+}
+</script>

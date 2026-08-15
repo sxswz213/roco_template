@@ -1,0 +1,171 @@
+img { 
+    border-radius:5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f6fbf2;
+  background-image: url($baseurl + "/images/image.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  color: #3f9f86;
+}
+
+a:hover {
+  color: #2f826d;
+}
+
+.jumbotron {
+    padding:20px; 
+    padding-bottom:7px; 
+    margin-top:22px; 
+    margin-bottom:22px;
+    font-size: medium;
+    color: #111;
+    background: #fff;
+    border: 1px solid #e6e8eb;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.jumbotron a {
+  color: #3f9f86;
+}
+
+.jumbotron p {
+  color: #444;
+}
+
+.jumbotron h4 {
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.jumbotron h4 a {
+  color: #444;
+}
+
+.publication-more-link {
+  color: #3f9f86;
+  font-weight: 700;
+  font-size: 1.08rem;
+  text-decoration: underline;
+}
+
+.sidebar-profile ul {
+  color: #444;
+}
+
+.sidebar-profile h4 {
+  margin-top: 16px;
+}
+
+#homeid h3,
+#publications h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+}
+
+#homeid h3 a {
+  color: #000;
+}
+
+#homeid h4,
+#publications h3 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #000;
+}
+
+#homeid .home-services h4 {
+  color: #444;
+}
+
+#homeid .home-services li {
+  color: #000;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  border-bottom: 4px solid var(--light);
+}
+
+.btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.container-fluid {
+  max-width: 68%;
+}
+
+.container-footer {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 68%;
+  padding-left:  20px;
+  padding-right: 20px;
+}
+
+.well-collapse {
+  padding-left:  20px;
+  padding-right: 20px;
+  padding-top:   12px;
+  padding-bottom: 4px;
+  border-radius:  7px;
+  min-height:     1px;
+  margin-top:    15px;
+  color:rgb(68, 68, 68);
+  background-color: var(--gray);
+  border: 2px solid var(--gray-dark);
+  blockquote {
+    border-color: var(--gray-dark);
+    border-color: rgba(0,0,0,.15);
+  }
+}
+
+
+.embed-container-home {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  // width: 435px;
+  // height: 150px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url($baseurl + "/images/thumbs/3dtrain.jpeg");
+}
+
+.embed-container {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  width: 175px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  // margin-left:7px;
+  // border: 1px solid red;
+
+.embed-container-spleen {
+  height: 155px;
+  background-image: url($baseurl + "/images/thumbs/spleen.jpg");
+}
+
+.embed-container-leuk {
+  height: 112px;
+  background-image: url($baseurl + "/images/thumbs/spleen.jpg");
+}
+
+.MathJax_ref {
+  fill: #00bc8c!important;
+}

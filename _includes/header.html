@@ -1,0 +1,29 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="navbar sticky-top navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">
+     <img src="{{ site.url }}{{ site.baseurl }}/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
+      {{ site.title | escape }}
+    </a>
+    <button class="toggler navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
+            {% for page in site.nav_pages %}       
+                {% assign nav_url = page.url | default: page.name %}
+                {% if page.label %}
+                    {% assign nav_label = page.label %}
+                {% else %}
+                    {% assign nav_label = page.name | capitalize %}
+                {% endif %}
+                <a class="nav-item nav-link" href="{{ site.url }}{{ site.baseurl }}/{{ nav_url }}">{{ nav_label }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</nav>

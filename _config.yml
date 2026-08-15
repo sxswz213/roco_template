@@ -1,0 +1,100 @@
+# Site settings
+title: Your Name
+email: your.email@example.edu
+description: Academic webpage template for researchers
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# Google analytics ID: Uncomment and add your own if needed
+# google_analytics: XX
+# google_analytics_4: XXX
+# google_tag_manager: XXX
+
+# Footer info
+affiliation: >
+  Your Name<br/>
+  Your Position<br/>
+  Your Institution
+
+location: >
+  Your Department<br/>
+  Your Institution<br/>
+  City, State/Province, Country
+
+contact: >
+  <a href="mailto:your.email@example.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact via email</a> <br/>
+  <a href="https://github.com/yourusername"><i class="fa fa-github fa-1x"></i> GitHub</a>
+
+# Pages shown in navbar
+nav_pages:
+  - name: about
+  - name: News
+    url: allnews.html
+  - name: publications
+  - name: activities
+    url: services
+    label: Activities
+#  - name: talks
+#  - name: research
+#  - name: software
+#  - name: team
+#  - name: teaching
+  - name: blogs
+
+include:
+  - .htaccess
+  - _pages
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true
+
+plugins: ["jekyll/scholar"]
+
+scholar:
+  last_name: Surname
+  first_name: [Given]
+
+  style: citesty
+  locale: en
+
+  source: /assets/
+  bibliography: ref.bib
+  bibliography_template: bibtemplate
+  sort_by: year, month
+  order: descending
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
+
+  query: "@*"
+
+  bibliography_list_attributes:
+    reversed: "reversed"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - update_boostrap.sh
+  - switch_theme.sh
+  - tags
+  - Rakefile

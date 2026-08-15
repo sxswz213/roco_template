@@ -1,0 +1,17 @@
+- name: Your Name
+  photo: profile-placeholder.svg
+  info: Your position, Department, Institution
+  email: your.email@example.edu
+  github: https://github.com/yourusername
+  researchgate: 
+  scholar: 
+  cv: 
+  # Change the items in "education" you have (up to 6)
+  education:
+    [
+      "(Year) Ph.D. Field, University",
+      "(Year) B.S./M.S. Field, University",
+    ]
+
+  educationshort:
+    ["(Year) Ph.D., University", "(Year) Degree, University"]
