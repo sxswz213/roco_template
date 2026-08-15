@@ -1,13 +1,16 @@
 ---
-title: "Academic Services & Activities"
+title: "Activities"
 layout: gridlay
 sitemap: false
 permalink: /services/
 ---
 
-## Academic Services & Activities
+## Kingdom Activities
 
 <div class="jumbotron">
+<p>
+  Outside the main research quests, Little Roco helps review young trainers' ideas, organizes small strategy workshops, and collects field notes from magical corners of the kingdom.
+</p>
 {% for group in site.data.academic_services %}
 <h4>{{ group.section }}</h4>
 <ul>

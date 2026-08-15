@@ -5,14 +5,14 @@ sitemap: false
 permalink: /about/
 ---
 
-## About
+## About Little Roco
 
 {% for member in site.data.pi %}
 
 <div class="jumbotron">
 <div class="row">
 <div class="col-sm-3">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" width="100%" style="max-width:250px"/>
+  <img src="{{ "/images/" | append: member.photo | relative_url }}" width="100%" style="max-width:250px"/>
 </div>
 <div class="col-sm-9 col-xs-12" style="top: 10px">
   
@@ -20,10 +20,18 @@ permalink: /about/
   
   <h5><i>{{ member.info }}</i></h5>
   {% if member.email %}<a href="mailto:{{ member.email }}" target="_blank"><i class="fa fa-envelope-square fa-3x"></i></a> {% endif %}
-  {% if member.cv %} <a href="{{ site.url }}{{ site.baseurl }}/{{ member.cv }}" target="_blank"><i class="ai ai-cv-square ai-3x"></i></a> {% endif %}
+  {% if member.cv %} <a href="{{ member.cv | relative_url }}" target="_blank"><i class="ai ai-cv-square ai-3x"></i></a> {% endif %}
   {% if member.scholar %} <a href="{{ member.scholar }}" target="_blank"><i class="ai ai-google-scholar-square ai-3x"></i></a> {% endif %}
   {% if member.github %} <a href="{{ member.github }}" target="_blank"><i class="fa fa-github-square fa-3x"></i></a> {% endif %}
   {% if member.researchgate %} <a href="{{ member.researchgate }}" target="_blank"><i class="ai ai-researchgate-square ai-3x"></i></a> {% endif %}
+
+  <p>
+    Little Roco studies how spirit companions form reliable teams in a kingdom full of surprises. The work blends magical field observation, cooperative battle strategy, and a healthy respect for spells that may or may not behave as expected.
+  </p>
+
+  <p>
+    The long-term goal is simple: help every spirit discover its best role, support its teammates, and shine brighter as part of a thoughtful, well-coordinated team.
+  </p>
 
   <ul style="overflow: hidden">
     {% for education in member.education %}
@@ -36,48 +44,24 @@ permalink: /about/
 </div>
 {% endfor %}
 
-{% if site.data.grants %}
-
 <div class="jumbotron">
-  <h3>Grants</h3>
+  <h3>Research Interests</h3>
   <ul>
-    {% for grant in site.data.grants %}
-      <li>{{ grant.name }}</li>
-    {% endfor %}
+    <li>Multi-spirit team coordination and role assignment.</li>
+    <li>Adaptive decision-making during unpredictable magical encounters.</li>
+    <li>Trust, complementary abilities, and magical chemistry in collaborative teams.</li>
+    <li>Readable field notes and reproducible spell experiments.</li>
   </ul>
 </div>
-{% endif %}
 
 {% if site.data.awards %}
 
 <div class="jumbotron">
-  <h3>Awards</h3>
+  <h3>Awards & Badges</h3>
   <ul>
     {% for award in site.data.awards %}
       <li>{{ award.name | replace: "-","&#8211;" }}</li>
     {% endfor %}
   </ul>
-</div>
-{% endif %}
-
-{% if site.data.people %}
-
-<div class="jumbotron">
-  <h3>Students and Mentoring</h3>
-  <ul>
-    {% for student in site.data.people %}
-      <li>{{ student.name }}, {{ student.location }} ({{ student.degree }}, {{ student.year }})</li>
-    {% endfor %}
-  </ul>
-</div>
-{% endif %}
-
-
-{% if site.data.funders %}
-<div class="jumbotron">
-  <h4>Sponsors</h4>
-  <div style='display:block; text-align:center; margin-left:auto; margin-right:auto;'>
-  {% for funder in site.data.funders %}<a href="{{ funder.url }}" target="_blank"><img src='{{ site.url }}{{ site.baseurl }}/images/{{ funder.image }}' style='max-height: 80px; max-width: 200px; margin: 1%'/></a>{% endfor %}
-  </div>
 </div>
 {% endif %}

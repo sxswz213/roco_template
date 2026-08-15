@@ -15,27 +15,29 @@ permalink: /
   color: #3f9f86;
 }
 
-.home-intro h3 {
+.home-intro h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #000;
 }
 </style>
 
 <div class="home-intro" markdown="1">
 
-### Hello, I'm Your Name!
+## Hi, I’m Little Roco! ✨
 
-I am a [position] in [department/lab] at [institution]. My research focuses on **research area 1**, **research area 2**, and **research area 3**.
+I am currently pursuing a degree in **Spirit Studies** at the **Roco Kingdom Academy of Magic**. My research focuses on cooperative strategies for multi-spirit battle teams, including role assignment, real-time coordination, and adaptive decision-making in unpredictable encounters.
 
-I am interested in building reliable, useful, and reproducible research systems for [brief application area]. Before joining [institution], I completed my [degree] in [field] at [previous institution].
+I believe a great team is not simply a collection of the strongest spirits. It is built through trust, complementary abilities, and a little bit of magical chemistry. My goal is to help every spirit find its perfect role and make the whole team shine brighter together.
 
-Feel free to get in touch if you would like to discuss research ideas, collaborations, or opportunities.
+When I am not studying battle formations or collecting research notes, you can usually find me exploring hidden corners of the kingdom, meeting new spirit companions, or testing slightly questionable spells. Feel free to knock on my door if you would like to exchange ideas, share an adventure, or team up for the next challenge! 🌿
 
 </div>
 
 <div class="container">
 <div class="row">
 <center>
-<img src="{{ "/images/banner-placeholder.svg" | relative_url }}" width="100%" style="opacity: 0.9;"/><br/>
+<img src="{{ "/images/banner.jpg" | relative_url }}" width="100%" style="opacity: 0.9;"/><br/>
   <br/>
 </center>
 </div>
@@ -57,7 +59,7 @@ Feel free to get in touch if you would like to discuss research ideas, collabora
 
 ---
 
-### [Academic Services & Activities](/services/)
+### [Kingdom Activities](/services/)
 
 <div class="home-services">
 {% for group in site.data.academic_services %}

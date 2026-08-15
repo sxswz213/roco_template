@@ -47,6 +47,36 @@ body[data-theme="huohua"] {
   --muted-text-color: #6b4a3b;
 }
 
+body[data-theme="maodou"] {
+  --page-bg-color: #fff2f7;
+  --page-bg-image: url(#{$baseurl + "/images/maodou.png"});
+  --navbar-bg: #e58bae;
+  --navbar-border: #ffd4e5;
+  --navbar-brand-color: #ffffff;
+  --navbar-link-color: #fff7fb;
+  --navbar-link-hover-color: #ffffff;
+  --link-color: #c95f8c;
+  --link-hover-color: #9f3f69;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --text-color: #321624;
+  --muted-text-color: #75465a;
+}
+
+body[data-theme="emoding"] {
+  --page-bg-color: #f6efe6;
+  --page-bg-image: url(#{$baseurl + "/images/emoding.png"});
+  --navbar-bg: #7a4d2f;
+  --navbar-border: #d2b08a;
+  --navbar-brand-color: #fff7ef;
+  --navbar-link-color: #f5e3d1;
+  --navbar-link-hover-color: #ffffff;
+  --link-color: #8a5a36;
+  --link-hover-color: #5c351f;
+  --card-bg: rgba(255, 252, 247, 0.9);
+  --text-color: #2f2118;
+  --muted-text-color: #6a5141;
+}
+
 body {
   min-height: 100vh;
   color: var(--text-color);

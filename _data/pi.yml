@@ -1,17 +1,16 @@
-- name: Your Name
+- name: Little Roco
   photo: profile.jpg
-  info: Your position, Department, Institution
-  email: your.email@example.edu
+  info: Spirit Studies student, Roco Kingdom Academy of Magic
+  email: little.roco@example.edu
   github: https://github.com/yourusername
-  researchgate: 
-  scholar: 
-  cv: 
-  # Change the items in "education" you have (up to 6)
+  researchgate: https://www.researchgate.net/profile/Little-Roco
+  scholar: https://scholar.google.com/citations?user=12NhEdQAAAAJ&hl=zh-CN
+  cv: assets/little-roco-cv.pdf
   education:
     [
-      "(Year) Ph.D. Field, University",
-      "(Year) B.S./M.S. Field, University",
+      "Current B.S. Spirit Studies, Roco Kingdom Academy of Magic",
+      "Apprentice Trainer, Roco Field Exploration Guild",
     ]
 
   educationshort:
-    ["(Year) Ph.D., University", "(Year) Degree, University"]
+    ["Spirit Studies, Roco Academy", "Field Explorer, Roco Kingdom"]

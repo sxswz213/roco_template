@@ -1,7 +1,7 @@
 # Site settings
-title: Your Name
-email: your.email@example.edu
-description: Academic webpage template for researchers
+title: Little Roco
+email: little.roco@example.edu
+description: A Roco Kingdom themed academic homepage template
 baseurl: ""
 url: "https://yourusername.github.io"
 theme_style: miaomiao
@@ -13,17 +13,17 @@ theme_style: miaomiao
 
 # Footer info
 affiliation: >
-  Your Name<br/>
-  Your Position<br/>
-  Your Institution
+  Little Roco<br/>
+  Spirit Studies Student<br/>
+  Roco Kingdom Academy of Magic
 
 location: >
-  Your Department<br/>
-  Your Institution<br/>
-  City, State/Province, Country
+  Spirit Strategy Tower<br/>
+  Roco Kingdom Academy of Magic<br/>
+  Roco Kingdom
 
 contact: >
-  <a href="mailto:your.email@example.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact via email</a> <br/>
+  <a href="mailto:little.roco@example.edu" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact via email</a> <br/>
   <a href="https://github.com/yourusername"><i class="fa fa-github fa-1x"></i> GitHub</a>
 
 # Pages shown in navbar
@@ -68,8 +68,8 @@ kramdown:
 plugins: ["jekyll/scholar"]
 
 scholar:
-  last_name: Surname
-  first_name: [Given]
+  last_name: Roco
+  first_name: [Little]
 
   style: citesty
   locale: en
